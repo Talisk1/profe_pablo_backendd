@@ -12,6 +12,13 @@ Se crearon los componentes standalone `Cabecera` y `Menu`, y las paginas
 `Inicio`, `Actividades`, `Contacto` e `Inscripcion` como base de la
 aplicacion (estructura de carpetas `components/` y `pages/`).
 
+### Etapa 2 - Navegacion
+Se configuraron las rutas de la aplicacion (`app.routes.ts`) usando
+`provideRouter`. El menu utiliza `routerLink` y `routerLinkActive`
+para resaltar la vista activa, y el contenido central se renderiza
+con `router-outlet` dentro de `app.html`, manteniendo la cabecera y
+el menu siempre visibles.
+
 ## Development server
 
 To start a local development server, run:
