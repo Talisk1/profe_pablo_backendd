@@ -5,6 +5,49 @@ sobre actividades y talleres disponibles durante el semestre.
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.7.
 
+## Versión de Angular
+Angular 22.1.7 (Angular CLI 22.1.8)
+
+## Instalación y ejecución
+1. Clonar el repositorio
+2. Instalar dependencias: `npm install`
+3. Ejecutar en modo desarrollo: `ng serve`
+4. Abrir en el navegador: http://localhost:4200/
+
+## Vistas y componentes principales
+- **Cabecera** (`components/cabecera`): título e identidad visual del portal, visible en todas las vistas.
+- **Menú** (`components/menu`): navegación entre las vistas usando routerLink y routerLinkActive.
+- **Inicio** (`pages/inicio`): mensaje de bienvenida y presentación del portal.
+- **Actividades** (`pages/actividades`): listado de 4 talleres (nombre, descripción y horario) mediante interpolación.
+- **Contacto** (`pages/contacto`): datos de contacto y horario de atención.
+- **Inscripción** (`pages/inscripcion`): formulario reactivo para solicitar participación en una actividad.
+
+## Rutas implementadas
+| Ruta            | Componente    |
+|------------------|--------------|
+| `/`              | Inicio       |
+| `/actividades`   | Actividades  |
+| `/contacto`      | Contacto     |
+| `/inscripcion`   | Inscripcion  |
+| `**` (no encontrada) | redirige a `/` |
+
+Configuradas en `app.routes.ts` mediante `provideRouter(routes)`, usando `RouterOutlet`, `RouterLink` y `RouterLinkActive`.
+
+## Formulario de inscripción y validaciones
+Implementado con ReactiveFormsModule, FormGroup y FormControl.
+
+| Campo      | Validación                          |
+|------------|--------------------------------------|
+| Nombre     | Obligatorio, mínimo 3 caracteres     |
+| Apellido   | Obligatorio, mínimo 3 caracteres     |
+| Correo     | Obligatorio, formato de email válido |
+| Carrera    | Obligatorio                          |
+| Actividad  | Obligatorio (selección, 4 opciones)  |
+| Jornada    | Obligatorio (selección)              |
+| Comentario | Opcional                             |
+
+Al enviar un formulario válido se registra la información en consola, se muestra una confirmación y se reinicia el formulario. Si es inválido, se marcan los campos y se muestran mensajes de error.
+
 ## Avance del proyecto
 
 ### Etapa 1 - Estructura inicial
@@ -18,6 +61,12 @@ Se configuraron las rutas de la aplicacion (`app.routes.ts`) usando
 para resaltar la vista activa, y el contenido central se renderiza
 con `router-outlet` dentro de `app.html`, manteniendo la cabecera y
 el menu siempre visibles.
+
+### Etapa 3 - Formulario y validaciones
+Se implementó el formulario reactivo de inscripción (`Inscripcion`) con `FormGroup`, `FormControl` y `Validators` para los 7 campos solicitados. Se agregaron mensajes de error visibles por campo y lógica de envío (console.log, confirmación y reset del formulario).
+
+### Etapa 4 - Integración y versión final
+Se aplicaron estilos CSS propios a cabecera, menú, vistas y formulario. Se verificó la navegación entre rutas, se ejecutó `ng build` sin errores y se realizó la revisión final antes de la entrega.
 
 ## Development server
 
