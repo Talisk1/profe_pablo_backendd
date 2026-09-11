@@ -1,0 +1,46 @@
+.menu {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  padding: 15px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+}
+
+.menu a.activo {
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+  font-weight: bold;
+}
+
+.menu .boton-inscripcion {
+  background-color: #6a1b9a;
+  color: white;
+}
+
+.menu .boton-inscripcion:hover {
+  background-color: #edeee9;
+  color: white;
+}

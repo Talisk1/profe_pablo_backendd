@@ -13,8 +13,6 @@ import {
   templateUrl: './inscripcion.html',
 })
 export class Inscripcion {
-  enviado = false;
-
   formularioInscripcion = new FormGroup({
     nombre: new FormControl('', [Validators.required, Validators.minLength(3)]),
     apellido: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -28,11 +26,11 @@ export class Inscripcion {
   enviarInscripcion() {
     if (this.formularioInscripcion.valid) {
       console.log('Inscripcion registrada:', this.formularioInscripcion.value);
-      this.enviado = true;
+      alert('Inscripcion registrada correctamente');
       this.formularioInscripcion.reset();
     } else {
+      alert('Debe completar correctamente los campos obligatorios');
       this.formularioInscripcion.markAllAsTouched();
-      this.enviado = false;
     }
   }
 }

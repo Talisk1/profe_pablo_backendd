@@ -23,7 +23,7 @@
 .campo select:focus,
 .campo textarea:focus {
   outline: none;
-  border-color: #2e7d32;
+  border-color: #6a1b9a;
 }
 
 .error {
@@ -33,15 +33,15 @@
 }
 
 .confirmacion {
-  background-color: #e8f5e9;
-  color: #2e7d32;
+  background-color: #f3e5f5;
+  color: #6a1b9a;
   padding: 12px;
   border-radius: 6px;
   margin-bottom: 15px;
 }
 
 button {
-  background-color: #2e7d32;
+  background-color: #6a1b9a;
   color: white;
   border: none;
   border-radius: 6px;
@@ -51,5 +51,5 @@ button {
 }
 
 button:hover {
-  background-color: #1b5e20;
+  background-color: #4a148c;
 }

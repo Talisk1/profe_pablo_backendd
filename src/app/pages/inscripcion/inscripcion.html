@@ -2,12 +2,6 @@
   <h2>Inscripcion a Actividades</h2>
   <p>Complete el formulario para registrar su solicitud de participacion.</p>
 
-  @if (enviado) {
-    <p class="confirmacion">
-      Su inscripcion fue registrada correctamente.
-    </p>
-  }
-
   <form [formGroup]="formularioInscripcion" (ngSubmit)="enviarInscripcion()">
 
     <div class="campo">

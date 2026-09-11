@@ -1,6 +1,24 @@
 <nav class="menu">
-  <a routerLink="/" routerLinkActive="activo" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
-  <a routerLink="/actividades" routerLinkActive="activo">Actividades</a>
-  <a routerLink="/contacto" routerLinkActive="activo">Contacto</a>
-  <a routerLink="/inscripcion" routerLinkActive="activo">Inscripcion</a>
+  <ul>
+    <li>
+      <a routerLink="/" routerLinkActive="activo" [routerLinkActiveOptions]="{exact: true}">
+        Inicio
+      </a>
+    </li>
+    <li>
+      <a routerLink="/actividades" routerLinkActive="activo">
+        Actividades
+      </a>
+    </li>
+    <li>
+      <a routerLink="/contacto" routerLinkActive="activo">
+        Contacto
+      </a>
+    </li>
+    <li>
+      <a routerLink="/inscripcion" routerLinkActive="activo" class="boton-inscripcion">
+        Inscripcion
+      </a>
+    </li>
+  </ul>
 </nav>
