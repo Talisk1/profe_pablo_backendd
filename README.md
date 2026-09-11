@@ -1,6 +1,16 @@
 # ConectaEsctudiante
 
+Portal "Conecta Estudiante" - SPA en Angular para informar a los estudiantes
+sobre actividades y talleres disponibles durante el semestre.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.7.
+
+## Avance del proyecto
+
+### Etapa 1 - Estructura inicial
+Se crearon los componentes standalone `Cabecera` y `Menu`, y las paginas
+`Inicio`, `Actividades`, `Contacto` e `Inscripcion` como base de la
+aplicacion (estructura de carpetas `components/` y `pages/`).
 
 ## Development server
 
