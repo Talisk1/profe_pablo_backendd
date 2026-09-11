@@ -1,0 +1,22 @@
+.datos-contacto {
+  list-style: none;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+.datos-contacto li {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.etiqueta {
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 4px;
+}
+
+.dato {
+  color: #555555;
+}

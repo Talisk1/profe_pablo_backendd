@@ -1,1 +1,79 @@
-<p>inscripcion works!</p>
+<section class="seccion">
+  <h2>Inscripcion a Actividades</h2>
+  <p>Complete el formulario para registrar su solicitud de participacion.</p>
+
+  @if (enviado) {
+    <p class="confirmacion">
+      Su inscripcion fue registrada correctamente.
+    </p>
+  }
+
+  <form [formGroup]="formularioInscripcion" (ngSubmit)="enviarInscripcion()">
+
+    <div class="campo">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" type="text" formControlName="nombre">
+      @if (formularioInscripcion.controls.nombre.invalid && formularioInscripcion.controls.nombre.touched) {
+        <small class="error">Ingrese un nombre valido de al menos 3 caracteres.</small>
+      }
+    </div>
+
+    <div class="campo">
+      <label for="apellido">Apellido</label>
+      <input id="apellido" type="text" formControlName="apellido">
+      @if (formularioInscripcion.controls.apellido.invalid && formularioInscripcion.controls.apellido.touched) {
+        <small class="error">Ingrese un apellido valido de al menos 3 caracteres.</small>
+      }
+    </div>
+
+    <div class="campo">
+      <label for="correo">Correo electronico</label>
+      <input id="correo" type="email" formControlName="correo">
+      @if (formularioInscripcion.controls.correo.invalid && formularioInscripcion.controls.correo.touched) {
+        <small class="error">Ingrese un correo electronico valido.</small>
+      }
+    </div>
+
+    <div class="campo">
+      <label for="carrera">Carrera o programa</label>
+      <input id="carrera" type="text" formControlName="carrera">
+      @if (formularioInscripcion.controls.carrera.invalid && formularioInscripcion.controls.carrera.touched) {
+        <small class="error">Este campo es obligatorio.</small>
+      }
+    </div>
+
+    <div class="campo">
+      <label for="actividad">Actividad</label>
+      <select id="actividad" formControlName="actividad">
+        <option value="">Seleccione una actividad</option>
+        <option value="robotica">Taller de Robotica</option>
+        <option value="lectura">Club de Lectura</option>
+        <option value="emprendimiento">Taller de Emprendimiento</option>
+        <option value="yoga">Yoga y Bienestar</option>
+      </select>
+      @if (formularioInscripcion.controls.actividad.invalid && formularioInscripcion.controls.actividad.touched) {
+        <small class="error">Debe seleccionar una actividad.</small>
+      }
+    </div>
+
+    <div class="campo">
+      <label for="jornada">Jornada</label>
+      <select id="jornada" formControlName="jornada">
+        <option value="">Seleccione una jornada</option>
+        <option value="manana">Manana</option>
+        <option value="tarde">Tarde</option>
+      </select>
+      @if (formularioInscripcion.controls.jornada.invalid && formularioInscripcion.controls.jornada.touched) {
+        <small class="error">Debe seleccionar una jornada.</small>
+      }
+    </div>
+
+    <div class="campo">
+      <label for="comentario">Comentario (opcional)</label>
+      <textarea id="comentario" rows="4" formControlName="comentario"></textarea>
+    </div>
+
+    <button type="submit">Enviar Inscripcion</button>
+
+  </form>
+</section>
